@@ -1,0 +1,26 @@
+@import 'variables';
+
+.messages-list {
+  margin: 20px;
+  border: 1px solid $border-color-grey;
+  border-radius: 7px;
+  max-height: 75vh;
+  overflow-y: auto;
+
+  &__header {
+    margin: 20px;
+  }
+
+  &__item {
+    padding: 20px;
+
+    &:nth-child(odd) {
+      background-color: $background-color-grey-light;
+    }
+  }
+
+  &__item-username {
+    font-weight: 600;
+    color: $text-color-blue;
+  }
+}

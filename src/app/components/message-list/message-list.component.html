@@ -1,0 +1,10 @@
+<h3 *ngIf="!messages; else messagesList" class="messages-list__header">Welcome to the chat! You may add new message in the form below or wait when somebody else in the chat will add new message</h3>
+<ng-template #messagesList>
+  <ul class="messages-list">
+    <li *ngFor="let message of messages" class="messages-list__item">
+      ({{message.date | date: 'hh:mm'}})
+      <span class="messages-list__item-username">{{message.userName}}:</span>
+      {{message.message}}
+    </li>
+  </ul>
+</ng-template>

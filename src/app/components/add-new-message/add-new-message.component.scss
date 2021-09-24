@@ -1,0 +1,32 @@
+@import 'variables';
+
+.add-new-message {
+  margin: 20px;
+
+  &__input-field {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+    border: 1px solid $border-color-grey;
+    border-radius: 5px 0 0 5px;
+  }
+
+  &__add-button {
+    width: 10%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid $border-color-grey;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: $background-color-green;
+    color: $text-color-white;
+
+    &:hover {
+      background-color: $background-color-green-secondary;
+    }
+
+    &:disabled {
+      background-color: rgba($background-color-green-secondary, 0.5);
+    }
+  }
+}

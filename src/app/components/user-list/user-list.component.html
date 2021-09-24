@@ -1,0 +1,9 @@
+<ul class="user-list">
+  <li
+    *ngFor="let user of users; let first = first"
+    class="user-list__item"
+    [class.active]="first"
+    (dblclick)="selectUser(user)"
+    [title]="!first ? 'Double click to add @\<username\> to the message' : null"
+  ><span *ngIf="first">You: </span>{{user.name}}</li>
+</ul>

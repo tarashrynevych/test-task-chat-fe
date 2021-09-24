@@ -1,0 +1,14 @@
+<form [formGroup]="addNewMessageForm" class="add-new-message">
+  <input
+    class="add-new-message__input-field"
+    type="text"
+    formControlName="message"
+    placeholder="Message"
+    name="message"
+  />
+  <button
+    class="add-new-message__add-button"
+    (click)="submitNewMessage()"
+    [disabled]="addNewMessageForm.invalid"
+  >Send</button>
+</form>
